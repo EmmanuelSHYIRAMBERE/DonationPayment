@@ -1,12 +1,13 @@
-import { PayPalButtons } from "@paypal/react-paypal-js";
 import React from "react";
+import "dotenv/config";
+import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const PayPalPayment = () => {
-  const serverUrl = "http://localhost:5000";
+  const serverUrl = process.env.serverUrl;
 
   const createOrder = (data, actions) => {
     return fetch(
-      `${serverUrl}/api/v1/payments/donate/666eb5d9c097f4f0c1a08440`,
+      `${serverUrl}/api/v1/payments/donate/66a2bf0412ec4b56887f5c6c`,
       {
         method: "POST",
         headers: {

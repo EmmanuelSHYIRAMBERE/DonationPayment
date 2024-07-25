@@ -1,11 +1,11 @@
 import "./App.css";
+import "dotenv/config";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import PayPalPayment from "./PayPalPayment";
 
 function App() {
   const initialOptions = {
-    clientId:
-      "AWYHudfmCu1VXnwdjncdZDYE-1rqfq-SBoX37eRVS3lfZ8b_nF-W1hvtTBXuyzkWKaLV8XMawcTPDKWj",
+    clientId: process.env.clientId,
     currency: "USD",
     intent: "capture",
   };
